@@ -21,10 +21,11 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="Entities" />
+          <factory-entry name="entityManagerFactory" />
         </datasource-mapping>
         <naming-strategy-map />
-        <deploymentDescriptor name="orm.xml" url="file://$MODULE_DIR$/.idea/META-INF/orm.xml" />
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/.idea/META-INF/persistence.xml" />
+        <deploymentDescriptor name="orm.xml" url="file://$MODULE_DIR$/META-INF/orm.xml" />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/META-INF/persistence.xml" />
       </configuration>
     </facet>
   </component>
