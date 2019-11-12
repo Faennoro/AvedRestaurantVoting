@@ -7,132 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a28893a-b92f-4c54-af1c-ae04a464ee96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/AuthorizedUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/model/RestaurantVoted.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/model/Vote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/JpaUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/dish/CrudDishRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/dish/DishRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/dish/DishRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/restaurant/CrudRestaurantRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/restaurant/RestaurantRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/restaurant/RestaurantRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/restaurantVoted/CrudRestaurantVotedRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/restaurantVoted/RestaurantVotedRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/restaurantVoted/RestaurantVotedRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/user/CrudUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/user/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/user/UserRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/vote/CrudVoteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/vote/VoteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/vote/VoteRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/service/VoteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/util/UserUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/util/ValidationUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/util/exception/IllegalRequestDataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/util/exception/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/RootController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/SecurityUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/dish/AbstractDishController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/dish/DishRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/json/JsonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/restaurant/AbstractRestaurantController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/restaurant/RestaurantRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/user/AbstractUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/user/AdminRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/user/ProfileRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RestaurantVoting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RestaurantVoting.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2c24fb5e-b260-4c80-a38c-ad1bae060510.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2c24fb5e-b260-4c80-a38c-ad1bae060510.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/controller/RestaurantController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/controller/RootController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/controller/dish/AbstractDishController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/controller/dish/DishController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/controller/user/AbstractUserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/controller/user/AdminRestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/model/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/model/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/model/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/model/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/DishRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/DishRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/RestaurantRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/RestaurantRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/repository/UserRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/service/DishService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/service/RestaurantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/to/DishTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/to/DishTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/to/RestaurantTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/to/RestaurantTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/to/UserTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/to/UserTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/json/JacksonObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restaurantVoting/web/json/JacksonObjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/initDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-app.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-app.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-db.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-security.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-security.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/initDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/controller/RestaurantController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/controller/RootController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/controller/dish/AbstractDishController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/controller/dish/DishController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/controller/user/AbstractUserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/controller/user/AdminRestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/model/AbstractBaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurantVoting/model/AbstractBaseEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/model/AbstractNamedEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurantVoting/model/AbstractNamedEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/model/Dish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurantVoting/model/Dish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurantVoting/model/Restaurant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurantVoting/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/repository/DishRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/repository/DishRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/repository/RestaurantRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/repository/RestaurantRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/repository/UserRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/service/DishService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurantVoting/service/DishService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/service/RestaurantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurantVoting/service/RestaurantService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurantVoting/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/to/DishTo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurantVoting/to/DishTo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurantVoting/to/RestaurantTo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurantVoting/to/RestaurantTo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-app.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-app.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-db.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/db/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/db/initDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/RestaurantController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/RestaurantController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/RootController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/RootController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/dish/AbstractDishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/dish/AbstractDishController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/dish/DishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/dish/DishController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/user/AbstractUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/user/AbstractUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/user/AdminRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/controller/user/AdminRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/model/AbstractBaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/model/AbstractBaseEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/model/AbstractNamedEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/model/AbstractNamedEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/model/Dish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/model/Dish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/model/Restaurant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/repository/DishRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/repository/DishRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/repository/RestaurantRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/repository/RestaurantRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/repository/UserRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/service/DishService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/service/DishService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/service/RestaurantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/service/RestaurantService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/to/DishTo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/to/DishTo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/to/RestaurantTo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/restaurantVoting/to/RestaurantTo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/spring/spring-app.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/spring/spring-app.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/spring/spring-db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/spring/spring-db.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/classes/spring/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/lib/jaxb-runtime-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javarestaurant/WEB-INF/lib/txw2-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -543,7 +418,7 @@
       <workItem from="1573296375559" duration="4984000" />
       <workItem from="1573387107572" duration="593000" />
       <workItem from="1573464024251" duration="8511000" />
-      <workItem from="1573528781293" duration="9602000" />
+      <workItem from="1573528781293" duration="10353000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1567427969655</created>
@@ -566,7 +441,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567429894454</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1">
+      <created>1573555003086</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573555003086</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1">
+      <created>1573555076445</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573555076445</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,6 +481,7 @@
     </ignored-roots>
     <MESSAGE value="gitignore" />
     <MESSAGE value="gitignore2" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore2" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>
