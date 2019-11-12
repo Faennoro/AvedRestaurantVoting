@@ -3,13 +3,14 @@ package restaurantVoting.web;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class RootController {
 
     @GetMapping("/")
     public String root() {
-        return "redirect:voting";
+        return "redirect:restaurants";
     }
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
@@ -19,18 +20,18 @@ public class RootController {
     }
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    @GetMapping("/users")
+    @GetMapping("/votes")
     public String getVotes() {
         return "votes";
     }
 
-    @GetMapping(value = "/login")
+    @GetMapping("/login")
     public String login() {
         return "login";
     }
 
     @GetMapping("/restaurants")
     public String getRestaurants() {
-        return "voting";
+        return "restaurants";
     }
 }

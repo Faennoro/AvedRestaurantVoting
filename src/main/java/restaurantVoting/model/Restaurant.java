@@ -17,11 +17,11 @@ import java.util.List;
         @NamedQuery(name = Restaurant.ALL_BY_DATE, query = "SELECT r FROM Restaurant r WHERE r.date=:date")
 })
 @Entity
-@Table(name = "restaurants", uniqueConstraints = {@UniqueConstraint(columnNames = {"name, date"}, name = "restaurants_unique_name_date_idx")})
+@Table(name = "restaurants", uniqueConstraints = {@UniqueConstraint(columnNames = {"name", "date"}, name = "restaurants_unique_name_date_idx")})
 public class Restaurant extends AbstractNamedEntity {
     public static final String ALL_SORTED = "Restaurant.getAll";
     public static final String DELETE = "Restaurant.delete";
-    public static final String ALL_BY_DATE = "Restaurant.delete";
+    public static final String ALL_BY_DATE = "Restaurant.allByDate";
 
     @NotBlank
     @Size(min = 2, max = 255)

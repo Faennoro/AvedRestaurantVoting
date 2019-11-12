@@ -1,10 +1,12 @@
 package restaurantVoting.repository.dish;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import restaurantVoting.model.Dish;
 
 import java.util.List;
 
+@Repository
 public class DishRepositoryImpl implements DishRepository{
     @Autowired
     private CrudDishRepository crudRepository;
@@ -15,8 +17,8 @@ public class DishRepositoryImpl implements DishRepository{
     }
 
     @Override
-    public boolean delete(int id, int restaurantId) {
-        return crudRepository.delete(id, restaurantId) != 0;
+    public boolean delete(int id) {
+        return crudRepository.delete(id) != 0;
     }
 
     @Override

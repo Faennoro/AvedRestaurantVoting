@@ -15,7 +15,7 @@ import java.time.LocalDate;
         @NamedQuery(name = RestaurantVoted.GET_BY_RESTAURANT, query = "SELECT d FROM RestaurantVoted d WHERE d.restaurant=:restaurant")
 })
 @Entity
-@Table(name = "restaurant_vote_history", uniqueConstraints = {@UniqueConstraint(columnNames = {"date, restaurant_id"}, name = "vote_history_unique_date_restaurant_idx")})
+@Table(name = "restaurant_vote_history", uniqueConstraints = {@UniqueConstraint(columnNames = {"date", "restaurant_id"}, name = "restaurant_vote_history_unique_date_restaurant_idx")})
 public class RestaurantVoted extends AbstractBaseEntity {
     public static final String ALL_SORTED = "RestaurantVoted.getAll";
     public static final String DELETE = "RestaurantVoted.delete";

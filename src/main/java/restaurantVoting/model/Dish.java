@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
                 "WHERE d.restaurant.id=:restaurantId AND d.price BETWEEN :minPrice AND :maxPrice ORDER BY d.price DESC"),
 })
 @Entity
-@Table(name = "dishes", uniqueConstraints = {@UniqueConstraint(columnNames = {"restaurant_id", "date"}, name = "dishes_unique_restaurant_date_idx")})
+@Table(name = "dishes", uniqueConstraints = {@UniqueConstraint(columnNames = {"restaurant_id", "description"}, name = "dishes_unique_restaurant_description_idx")})
 public class Dish extends AbstractBaseEntity{
     public static final String ALL_SORTED = "Dish.getAll";
     public static final String DELETE = "Dish.delete";

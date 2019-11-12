@@ -20,9 +20,9 @@ public class Vote {
 
     public static final LocalTime STOP_VOTING = LocalTime.of(11, 00);
     public static final String DELETE_BY_DATE = "Vote.deleteByDate";
-    public static final String DELETE_FOR_DATES = "Vote.deleteByDate";
-    public static final String GET_BY_USER = "Vote.deleteByDate";
-    public static final String GET_BY_USER_DATE = "Vote.deleteByDate";
+    public static final String DELETE_FOR_DATES = "Vote.deleteForDates";
+    public static final String GET_BY_USER = "Vote.getByUser";
+    public static final String GET_BY_USER_DATE = "Vote.getByUserDate";
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_seq")

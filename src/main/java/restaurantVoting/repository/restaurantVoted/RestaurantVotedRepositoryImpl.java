@@ -9,6 +9,7 @@ import restaurantVoting.model.RestaurantVoted;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 @Transactional(readOnly = true)
@@ -27,17 +28,17 @@ public class RestaurantVotedRepositoryImpl implements RestaurantVotedRepository 
     }
 
     @Override
-    public List<RestaurantVoted> getForDate(LocalDate date) {
+    public Optional<RestaurantVoted> getForDate(LocalDate date) {
         return crudRepository.getForDate(date);
     }
 
     @Override
-    public List<RestaurantVoted> getBetweenDates(LocalDate date) {
-        return crudRepository.getBetweenDates(date);
+    public Optional<RestaurantVoted> getBetweenDates(LocalDate minDate, LocalDate maxDate) {
+        return crudRepository.getBetweenDates(minDate, maxDate);
     }
 
     @Override
-    public List<RestaurantVoted> getByRestaurant(Integer restaurant_id) {
+    public Optional<RestaurantVoted> getByRestaurant(Integer restaurant_id) {
         return crudRepository.getByRestaurant(restaurant_id);
     }
 

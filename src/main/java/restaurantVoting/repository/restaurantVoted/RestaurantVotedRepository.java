@@ -5,6 +5,7 @@ import restaurantVoting.model.RestaurantVoted;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 public interface RestaurantVotedRepository {
     // null if not found, when updated
@@ -18,9 +19,9 @@ public interface RestaurantVotedRepository {
 
     List<RestaurantVoted> getAll();
 
-    List<RestaurantVoted> getForDate(LocalDate date);
+    Optional<RestaurantVoted> getForDate(LocalDate date);
 
-    List<RestaurantVoted> getBetweenDates(LocalDate date);
+    Optional<RestaurantVoted> getBetweenDates(LocalDate minDate, LocalDate maxDate);
 
-    List<RestaurantVoted> getByRestaurant(Integer restaurantId);
+    Optional<RestaurantVoted> getByRestaurant(Integer restaurantId);
 }

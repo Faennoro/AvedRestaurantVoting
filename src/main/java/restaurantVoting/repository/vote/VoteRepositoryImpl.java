@@ -58,7 +58,7 @@ public class VoteRepositoryImpl implements VoteRepository {
     }
 
     @Override
-    public boolean delete(int id) {
+    public int delete(int id) {
         return crudRepository.delete(id);
     }
 }

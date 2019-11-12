@@ -28,7 +28,6 @@
     <bean class="org.springframework.format.support.FormattingConversionServiceFactoryBean" id="conversionService">
         <property name="formatters">
             <set>
-                <bean class="restaurantVoting.web.converter.DateTimeFormatters.LocalTimeFormatter"/>
                 <bean class="restaurantVoting.web.converter.DateTimeFormatters.LocalDateFormatter"/>
             </set>
         </property>

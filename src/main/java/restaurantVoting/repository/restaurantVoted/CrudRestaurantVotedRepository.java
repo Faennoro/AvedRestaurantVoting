@@ -11,6 +11,7 @@ import restaurantVoting.model.RestaurantVoted;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Transactional(readOnly = true)
 public interface CrudRestaurantVotedRepository extends JpaRepository<RestaurantVoted, Integer> {
@@ -27,12 +28,12 @@ public interface CrudRestaurantVotedRepository extends JpaRepository<RestaurantV
     List<RestaurantVoted> getAll();
 
     @Query("SELECT r FROM RestaurantVoted r WHERE r.date=:date")
-    List<RestaurantVoted> getForDate(@Param("date")LocalDate date);
+    Optional<RestaurantVoted> getForDate(@Param("date")LocalDate date);
 
-    @Query("SELECT r FROM RestaurantVoted r WHERE r.id=:id AND r.date BETWEEN :minDate AND :maxDate ORDER BY r.date DESC")
-    List<RestaurantVoted> getBetweenDates(@Param("date")LocalDate date);
+    @Query("SELECT r FROM RestaurantVoted r WHERE r.date BETWEEN :minDate AND :maxDate ORDER BY r.date DESC")
+    Optional<RestaurantVoted> getBetweenDates(@Param("minDate") LocalDate minDate, @Param("maxDate") LocalDate maxDate);
 
-    @Query("SELECT d FROM RestaurantVoted d WHERE d.restaurant=:restaurant")
-    List<RestaurantVoted> getByRestaurant(@Param("restaurantId") Integer restaurantId);
+    @Query("SELECT r FROM RestaurantVoted r WHERE r.restaurant.id=:restaurantId")
+    Optional<RestaurantVoted> getByRestaurant(@Param("restaurantId") Integer restaurantId);
 
 }

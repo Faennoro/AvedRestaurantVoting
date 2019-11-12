@@ -20,7 +20,7 @@
         </encoder>
     </appender>
 
-    <logger name="ru.graduation" level="debug"/>
+    <logger name="restaurantVoting" level="debug"/>
 
     <root level="info">
         <appender-ref ref="file"/>

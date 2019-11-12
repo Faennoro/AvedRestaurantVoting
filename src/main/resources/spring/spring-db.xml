@@ -15,15 +15,14 @@
 
         <context:property-placeholder location="classpath:db/hsqldb.properties" system-properties-mode="OVERRIDE"/>
 
-        <!--no pooling-->
+        <context:component-scan base-package="restaurantVoting.repository"/>
+        <jpa:repositories base-package="restaurantVoting.repository"/>
         <bean id="dataSource"
               class="org.springframework.jdbc.datasource.DriverManagerDataSource"
               p:driverClassName="org.hsqldb.jdbcDriver"
               p:url="${database.url}"
               p:username="${database.username}"
-              p:password="${database.password}"/>
-
-
+              p:password=""/>
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
           p:dataSource-ref="dataSource"
@@ -43,8 +42,8 @@
                 <entry key="#{T(org.hibernate.cfg.AvailableSettings).USE_SECOND_LEVEL_CACHE}" value="true"/>
                 <entry key="#{T(org.hibernate.cfg.AvailableSettings).USE_QUERY_CACHE}" value="false"/> <!--default-->
 
-                <entry key="javax.persistence.validation.group.pre-persist" value="ru.restaurantVoting.View$Persist"/>
-                <entry key="javax.persistence.validation.group.pre-update" value="ru.restaurantVoting.View$Persist"/>
+                <entry key="javax.persistence.validation.group.pre-persist" value="restaurantVoting.View$Persist"/>
+                <entry key="javax.persistence.validation.group.pre-update" value="restaurantVoting.View$Persist"/>
             </map>
         </property>
 
@@ -59,5 +58,7 @@
           p:entityManagerFactory-ref="entityManagerFactory"/>
 
     <bean class="restaurantVoting.repository.JpaUtil"/>
+
+
 
 </beans>

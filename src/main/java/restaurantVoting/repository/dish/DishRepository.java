@@ -9,7 +9,7 @@ public interface DishRepository {
     Dish save(Dish dish, int restaurantId);
 
     // false if not found
-    boolean delete(int id, int restaurantId);
+    boolean delete(int id);
 
     // null if not found
     Dish get(int id, int restaurantId);

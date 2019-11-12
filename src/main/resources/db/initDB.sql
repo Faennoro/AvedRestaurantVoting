@@ -2,9 +2,9 @@ DROP TABLE user_roles IF EXISTS;
 DROP TABLE user_vote_history IF EXISTS;
 DROP TABLE dishes_history IF EXISTS;
 DROP TABLE dishes IF EXISTS;
-DROP TABLE restaurants IF EXISTS;
 DROP TABLE users IF EXISTS;
 DROP TABLE restaurant_vote_history IF EXISTS;
+DROP TABLE restaurants IF EXISTS;
 DROP SEQUENCE global_seq IF EXISTS;
 
 CREATE SEQUENCE GLOBAL_SEQ AS INTEGER START WITH 100000;
@@ -47,7 +47,7 @@ CREATE TABLE restaurant_vote_history
     restaurant_id INTEGER NOT NULL,
     FOREIGN KEY (restaurant_id) REFERENCES restaurants (id) ON DELETE CASCADE
 );
-CREATE UNIQUE INDEX vote_history_unique_date_restaurant_idx
+CREATE UNIQUE INDEX restaurant_vote_history_unique_date_restaurant_idx
     ON restaurant_vote_history (date, restaurant_id);
 
 CREATE TABLE dishes

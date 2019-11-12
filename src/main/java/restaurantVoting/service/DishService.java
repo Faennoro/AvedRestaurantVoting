@@ -30,7 +30,7 @@ public class DishService {
     }
 
     public void delete(int id, int restaurantId){
-        ValidationUtil.checkNotFoundWithId(repository.delete(id, restaurantId), id);
+        ValidationUtil.checkNotFoundWithId(repository.delete(id), id);
     }
 
     public Dish get(int id, int restaurantId){
