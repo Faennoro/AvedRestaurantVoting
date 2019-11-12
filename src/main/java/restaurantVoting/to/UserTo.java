@@ -1,6 +1,7 @@
 package restaurantVoting.to;
 
 import org.hibernate.validator.constraints.Range;
+import org.hibernate.validator.constraints.SafeHtml;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -13,11 +14,13 @@ public class UserTo extends BaseTo implements Serializable {
 
     @NotBlank
     @Size(min = 2, max = 100)
+    @SafeHtml
     private String name;
 
     @Email
     @NotBlank
     @Size(max = 100)
+    @SafeHtml
     private String email;
 
     @NotBlank

@@ -3,7 +3,9 @@ package restaurantVoting.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.annotations.*;
 import org.hibernate.annotations.Cache;
+import org.hibernate.validator.constraints.SafeHtml;
 import org.springframework.util.CollectionUtils;
+import restaurantVoting.View;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
@@ -21,8 +23,8 @@ import java.util.Set;
 
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @NamedQueries({
-        @javax.persistence.NamedQuery(name = User.DELETE, query = "DELETE FROM User u WHERE u.id=:id"),
-        @javax.persistence.NamedQuery(name = User.BY_EMAIL, query = "SELECT DISTINCT u FROM User u LEFT JOIN FETCH u.roles WHERE u.email=?1"),
+        @NamedQuery(name = User.DELETE, query = "DELETE FROM User u WHERE u.id=:id"),
+        @NamedQuery(name = User.BY_EMAIL, query = "SELECT DISTINCT u FROM User u LEFT JOIN FETCH u.roles WHERE u.email=?1"),
         @NamedQuery(name = User.ALL_SORTED, query = "SELECT u FROM User u ORDER BY u.name, u.email"),
 })
 @Entity
@@ -37,6 +39,7 @@ public class User extends AbstractNamedEntity {
     @Email
     @NotBlank
     @Size(max = 100)
+    @SafeHtml(groups = {View.Web.class})
     private String email;
 
     @Column(name = "password", nullable = false)
@@ -65,7 +68,7 @@ public class User extends AbstractNamedEntity {
     }
 
     public User(User u){
-        this(u.getId(), u.getName(), u.getEmail(), u.getPassword(), u.isEnabled(), u.getRegistered(), u.getRoles())
+        this(u.getId(), u.getName(), u.getEmail(), u.getPassword(), u.isEnabled(), u.getRegistered(), u.getRoles());
     }
 
     public User(Integer id, String name, String email, String password, Role role, Role... roles) {
