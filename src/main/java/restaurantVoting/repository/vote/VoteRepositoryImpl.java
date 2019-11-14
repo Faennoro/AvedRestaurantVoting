@@ -48,13 +48,13 @@ public class VoteRepositoryImpl implements VoteRepository {
     }
 
     @Override
-    public Optional<Vote> getByUser(Integer userId) {
-        return crudVoteRepository.getByUser(userId);
+    public List<Vote> getByUser(Integer userId) {
+        return crudVoteRepository.getByUser(userId).orElse(null);
     }
 
     @Override
-    public Optional<Vote> getByUserDate(Integer userId, LocalDate date) {
-        return crudVoteRepository.getByUserDate(userId, date);
+    public Vote getByUserDate(Integer userId, LocalDate date) {
+        return crudVoteRepository.getByUserDate(userId, date).orElse(null);
     }
 
     @Override

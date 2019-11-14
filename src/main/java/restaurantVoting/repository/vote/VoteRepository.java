@@ -19,9 +19,9 @@ public interface VoteRepository {
     // null if not found
     Vote get(int id, int userId, int restaurantId);
 
-    Optional<Vote> getByUser(Integer userId);
+    List<Vote> getByUser(Integer userId);
 
-    Optional<Vote> getByUserDate(Integer userId, LocalDate date);
+    Vote getByUserDate(Integer userId, LocalDate date);
 
     List<Vote> getAll();
 

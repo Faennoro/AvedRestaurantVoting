@@ -29,7 +29,7 @@ public class DishService {
         return ValidationUtil.checkNotFoundWithId(repository.save(dish, restaurantId), dish.getId());
     }
 
-    public void delete(int id, int restaurantId){
+    public void delete(int id){
         ValidationUtil.checkNotFoundWithId(repository.delete(id), id);
     }
 
@@ -38,6 +38,8 @@ public class DishService {
     }
 
     public List<Dish> getAll(int restaurantId){return repository.getAll(restaurantId);}
+
+    public Dish getWithRestaurant(int id, int restaurantId){return ValidationUtil.checkNotFoundWithId(repository.getWithRestaurant(id, restaurantId),id);}
 
 
 }

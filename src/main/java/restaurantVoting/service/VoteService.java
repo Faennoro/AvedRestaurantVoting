@@ -22,21 +22,25 @@ public class VoteService {
         this.repository = repository;
     }
 
-    public Vote get(int id) { return ValidationUtil.checkNotFoundWithId(repository.get(id),id);
+    public Vote get(int id, Integer userId, Integer restaurantId) { return ValidationUtil.checkNotFoundWithId(repository.get(id, userId, restaurantId),id);
     }
 
     public void delete(int id) {ValidationUtil.checkNotFoundWithId(repository.delete(id), id);}
 
     public List<Vote> getAll(){ return repository.getAll();}
 
-    public void update(Vote vote){
+    public void update(Vote vote, Integer userId, Integer restaurantId){
         Assert.notNull(vote, "vote must not be null");
-        ValidationUtil.checkNotFoundWithId(repository.save(vote), vote.getId());
+        ValidationUtil.checkNotFoundWithId(repository.save(vote, userId, restaurantId), vote.getId());
     }
 
-    public Vote create(Vote vote){
+    public Vote create(Vote vote, Integer userId, Integer restaurantId){
         Assert.notNull(vote, "vote must not be null");
-        return repository.save(vote);
+        return repository.save(vote, userId, restaurantId);
+    }
+
+    public List<Vote> getByUser(Integer userId){
+        return repository.getByUser(userId);
     }
 
 }
