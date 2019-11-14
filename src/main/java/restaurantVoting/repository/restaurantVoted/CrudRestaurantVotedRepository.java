@@ -36,6 +36,6 @@ public interface CrudRestaurantVotedRepository extends JpaRepository<RestaurantV
     Optional<RestaurantVoted> getBetweenDates(@Param("minDate") LocalDate minDate, @Param("maxDate") LocalDate maxDate);
 
     @Query("SELECT r FROM RestaurantVoted r WHERE r.restaurant.id=:restaurantId")
-    Optional<RestaurantVoted> getByRestaurant(@Param("restaurantId") Integer restaurantId);
+    Optional<RestaurantVoted> getWithRestaurant(@Param("restaurantId") Integer restaurantId);
 
 }

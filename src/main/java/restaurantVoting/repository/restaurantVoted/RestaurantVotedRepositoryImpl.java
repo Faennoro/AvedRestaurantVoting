@@ -41,8 +41,8 @@ public class RestaurantVotedRepositoryImpl implements RestaurantVotedRepository 
     }
 
     @Override
-    public Optional<RestaurantVoted> getByRestaurant(Integer restaurant_id) {
-        return crudRestaurantVotedRepository.getByRestaurant(restaurant_id);
+    public Optional<RestaurantVoted> getWithRestaurant(Integer restaurant_id) {
+        return crudRestaurantVotedRepository.getWithRestaurant(restaurant_id);
     }
 
     @Override
