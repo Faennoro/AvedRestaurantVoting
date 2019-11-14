@@ -16,17 +16,13 @@ import java.time.LocalTime;
         @NamedQuery(name = Vote.GET_BY_USER, query = "SELECT v FROM Vote v WHERE v.user.id =: userId ORDER BY v.restaurant.name"),
         @NamedQuery(name = Vote.GET_BY_USER_DATE, query = "SELECT v FROM Vote v WHERE v.user.id =: userId AND v.date =: date ORDER BY v.restaurant.name")
 })
-public class Vote {
+public class Vote extends AbstractBaseEntity{
 
     public static final LocalTime STOP_VOTING = LocalTime.of(11, 00);
     public static final String DELETE_BY_DATE = "Vote.deleteByDate";
     public static final String DELETE_FOR_DATES = "Vote.deleteForDates";
     public static final String GET_BY_USER = "Vote.getByUser";
     public static final String GET_BY_USER_DATE = "Vote.getByUserDate";
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_seq")
-    private Integer id;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)

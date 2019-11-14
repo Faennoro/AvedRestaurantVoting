@@ -9,13 +9,13 @@ import java.util.Optional;
 
 public interface RestaurantVotedRepository {
     // null if not found, when updated
-    RestaurantVoted save(RestaurantVoted restaurant);
+    RestaurantVoted save(RestaurantVoted restaurant, int restaurantId);
 
     // false if not found
     boolean delete(int id);
 
     // null if not found
-    RestaurantVoted get(int id);
+    RestaurantVoted get(int id, int restaurantId);
 
     List<RestaurantVoted> getAll();
 

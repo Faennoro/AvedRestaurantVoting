@@ -24,6 +24,8 @@ public interface CrudRestaurantVotedRepository extends JpaRepository<RestaurantV
     @Transactional
     RestaurantVoted save(RestaurantVoted restaurant);
 
+
+
     @Query("SELECT r FROM RestaurantVoted r ORDER BY r.votes ASC")
     List<RestaurantVoted> getAll();
 

@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public interface VoteRepository {
     // null if not found, when updated
-    Vote save(Vote vote);
+    Vote save(Vote vote, Integer userId, Integer restaurantId);
 
     // false if not found
     boolean deleteByDate(LocalDate date);
@@ -17,7 +17,7 @@ public interface VoteRepository {
     boolean deleteForDates(LocalDate date);
 
     // null if not found
-    Vote get(int id);
+    Vote get(int id, int userId, int restaurantId);
 
     Optional<Vote> getByUser(Integer userId);
 

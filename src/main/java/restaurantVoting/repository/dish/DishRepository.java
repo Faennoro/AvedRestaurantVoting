@@ -19,4 +19,6 @@ public interface DishRepository {
     default Dish getWithRestaurant(int id, int restaurantId) {
         throw new UnsupportedOperationException();
     }
+
+    //TODO getBetween
 }
