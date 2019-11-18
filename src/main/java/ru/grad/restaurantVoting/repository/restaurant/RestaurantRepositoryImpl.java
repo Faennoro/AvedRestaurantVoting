@@ -35,4 +35,9 @@ public class RestaurantRepositoryImpl implements RestaurantRepository{
     public List<Restaurant> getAll() {
         return crudRepository.findAll(SORT_NAME_ADDRESS);
     }
+
+    @Override
+    public Restaurant getWithDishes(int id) {
+        return crudRepository.getWithDishes(id);
+    }
 }

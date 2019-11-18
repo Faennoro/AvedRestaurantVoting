@@ -14,7 +14,7 @@ import java.util.Optional;
 @Repository
 @Transactional(readOnly = true)
 public class RestaurantVotedRepositoryImpl implements RestaurantVotedRepository {
-    private static final Sort SORT_NAME_ADDRESS = new Sort(Sort.Direction.ASC, "name", "address");
+    private static final Sort SORT_DATE = new Sort(Sort.Direction.ASC, "date");
 
     @Autowired
     private CrudRestaurantVotedRepository crudRestaurantVotedRepository;
@@ -57,7 +57,7 @@ public class RestaurantVotedRepositoryImpl implements RestaurantVotedRepository 
 
     @Override
     public List<RestaurantVoted> getAll() {
-        return crudRestaurantVotedRepository.findAll(SORT_NAME_ADDRESS);
+        return crudRestaurantVotedRepository.findAll(SORT_DATE);
     }
 
     @Override

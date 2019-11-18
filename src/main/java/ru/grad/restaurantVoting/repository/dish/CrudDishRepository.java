@@ -21,7 +21,7 @@ public interface CrudDishRepository extends JpaRepository<Dish, Integer> {
     @Transactional
     Dish save(Dish dish);
 
-    @Query("SELECT m FROM Dish m WHERE m.restaurant.id=:restaurantId ORDER BY m.price DESC")
+    @Query("SELECT m FROM Dish m WHERE m.restaurant.id= :restaurantId ORDER BY m.price DESC")
     List<Dish> getAll(@Param("restaurantId") int restaurantId);
 
     @Query("SELECT d from Dish d WHERE d.restaurant.id=:restaurantId AND d.price BETWEEN :minPrice AND :maxPrice ORDER BY d.price DESC")

@@ -28,7 +28,7 @@ public class Restaurant extends AbstractNamedEntity {
     @OrderBy("price DESC")
     protected List<Dish> dishes;
 
-    @OneToMany(mappedBy = "restaurant")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "restaurant")
     protected List<RestaurantVoted> restaurantVoted;
 
     @Column(name = "date", nullable = false, columnDefinition = "date default now()")

@@ -24,7 +24,7 @@ public interface CrudRestaurantVotedRepository extends JpaRepository<RestaurantV
 
 
 
-    @Query("SELECT r FROM RestaurantVoted r ORDER BY r.votes ASC")
+    @Query("SELECT r FROM RestaurantVoted r ORDER BY r.date ASC")
     List<RestaurantVoted> getAll();
 
     @Query("SELECT r FROM RestaurantVoted r WHERE r.date=:date")

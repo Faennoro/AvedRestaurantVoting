@@ -28,14 +28,16 @@ public interface CrudVoteRepository extends JpaRepository<Vote, Integer> {
     @Transactional
     Vote save(Vote vote);
 
-    @Query("SELECT v FROM Vote v WHERE v.user.id =: userId ORDER BY v.restaurant.name")
+    @Query("SELECT v FROM Vote v WHERE v.user.id = :userId ORDER BY v.restaurant.name")
     Optional<List<Vote>> getByUser(@Param("userId") Integer userId);
 
-    @Query("SELECT v FROM Vote v WHERE v.user.id =: userId AND v.date =: date ORDER BY v.restaurant.name")
-    Optional<Vote> getByUserDate(@Param("userId") Integer userId, @Param("date") LocalDate date);
+    @Query("SELECT v FROM Vote v WHERE v.user.id = :userId AND v.date = :date")
+    Optional<Vote> findByUserAndDate(@Param("userId") Integer userId, @Param("date") LocalDate date);
 
-    @Query("SELECT r FROM Restaurant r WHERE r.id=:Id ORDER BY r.name ASC")
-    List<Dish> getAll();
+    @Query("SELECT v FROM Vote v WHERE v.id= :Id")
+    List<Vote> getAll();
+
+
 
     @Override
     void delete(Vote entity);

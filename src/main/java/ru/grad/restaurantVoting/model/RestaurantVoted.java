@@ -2,6 +2,7 @@ package ru.grad.restaurantVoting.model;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import ru.grad.restaurantVoting.View;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -37,9 +38,9 @@ public class RestaurantVoted extends AbstractBaseEntity {
     private Integer votes;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "restaurant_id", referencedColumnName = "id")
+    @JoinColumn(name = "restaurant_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @NotNull
+    @NotNull(groups = View.Persist.class)
     private Restaurant restaurant;
 
     public RestaurantVoted() {

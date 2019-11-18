@@ -50,8 +50,8 @@ public class VoteRepositoryImpl implements VoteRepository {
     }
 
     @Override
-    public Vote getByUserDate(Integer userId, LocalDate date) {
-        return crudVoteRepository.getByUserDate(userId, date).orElse(null);
+    public Vote findByUserAndDate(Integer userId, LocalDate date) {
+        return crudVoteRepository.findByUserAndDate(userId, date).orElse(null);
     }
 
     @Override

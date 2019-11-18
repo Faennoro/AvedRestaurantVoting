@@ -19,7 +19,7 @@ public interface VoteRepository {
 
     List<Vote> getByUser(Integer userId);
 
-    Vote getByUserDate(Integer userId, LocalDate date);
+    Vote findByUserAndDate(Integer userId, LocalDate date);
 
     List<Vote> getAll();
 

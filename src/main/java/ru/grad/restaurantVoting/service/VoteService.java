@@ -7,10 +7,11 @@ import ru.grad.restaurantVoting.model.Vote;
 import ru.grad.restaurantVoting.repository.vote.VoteRepository;
 import ru.grad.restaurantVoting.util.ValidationUtil;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-@Service
+//@Service
 public class VoteService {
 
     private final VoteRepository repository;
@@ -36,6 +37,10 @@ public class VoteService {
         if (timeNow.isBefore(Vote.STOP_VOTING)) {
             return repository.save(vote, userId, restaurantId);
         } else return vote;
+    }
+
+    public Vote getVoteUserDate(Integer userId, LocalDate localDate){
+        return repository.findByUserAndDate(userId, localDate);
     }
 
     public List<Vote> getByUser(Integer userId){

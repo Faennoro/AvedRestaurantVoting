@@ -17,8 +17,8 @@ public class RestaurantVotedRestController extends AbstractRestaurantVotedContro
     static final String REST_URL = "/rest/voting";
 
     @Override
-    @GetMapping("/{id}")
-    public RestaurantVoted get(@PathVariable int id, @RequestParam int restaurantId) {
+    @GetMapping("/{id}/{restaurantId}")
+    public RestaurantVoted get(@PathVariable int id, @PathVariable int restaurantId) {
         return super.get(id, restaurantId);
     }
 

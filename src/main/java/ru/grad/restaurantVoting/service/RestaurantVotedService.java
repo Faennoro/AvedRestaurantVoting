@@ -56,7 +56,7 @@ public class RestaurantVotedService {
             if (vote != null){
                 voteRepository.delete(vote);
                 Integer savedRestaurantId = vote.getRestaurant().getId();
-                restaurantVotedRepository.decreaseVotes(restaurantId,date);
+                restaurantVotedRepository.decreaseVotes(savedRestaurantId,date);
             }
             vote = new Vote(date);
             voteRepository.save(vote,userId,restaurantId);
@@ -70,9 +70,7 @@ public class RestaurantVotedService {
         return voteRepository.getByUser(userId);
     }
 
-
-
     public Vote getVoteUserDate(Integer userId, LocalDate localDate){
-        return voteRepository.getByUserDate(userId, localDate);
+        return voteRepository.findByUserAndDate(userId, localDate);
     }
 }
