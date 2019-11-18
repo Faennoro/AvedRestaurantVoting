@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>javagraduation</groupId>
-    <artifactId>javarestaurant</artifactId>
+    <groupId>ru.grad</groupId>
+    <artifactId>restaurantVoting</artifactId>
     <packaging>war</packaging>
 
     <version>1.0-SNAPSHOT</version>
@@ -40,7 +40,7 @@
     </properties>
 
     <build>
-        <finalName>javaRestaurant</finalName>
+        <finalName>restaurantVoting</finalName>
         <defaultGoal>package</defaultGoal>
         <plugins>
             <plugin>
@@ -90,8 +90,8 @@
                     </configuration>
                     <deployables>
                         <deployable>
-                            <groupId>RestaurantVoting</groupId>
-                            <artifactId>javaRestaurant</artifactId>
+                            <groupId>ru.grad</groupId>
+                            <artifactId>restaurantVoting</artifactId>
                             <type>war</type>
                             <properties>
                                 <context>${project.build.finalName}</context>

@@ -7,5 +7,5 @@
     <import resource="spring-tools.xml"/>
     <import resource="spring-security.xml"/>
 
-    <context:component-scan base-package="restaurantVoting.service"/>
+    <context:component-scan base-package="ru.grad.restaurantVoting.service"/>
 </beans>
