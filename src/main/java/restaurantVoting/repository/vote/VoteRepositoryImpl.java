@@ -15,7 +15,6 @@ import java.util.Optional;
 @Repository
 @Transactional(readOnly = true)
 public class VoteRepositoryImpl implements VoteRepository {
-    private static final Sort SORT_NAME_ADDRESS = new Sort(Sort.Direction.ASC, "name", "address");
 
     @Autowired
     private CrudVoteRepository crudVoteRepository;
@@ -63,7 +62,6 @@ public class VoteRepositoryImpl implements VoteRepository {
     }
 
     @Override
-    public int delete(int id) {
-        return crudVoteRepository.delete(id);
+    public void delete(Vote vote){crudVoteRepository.delete(vote);
     }
 }

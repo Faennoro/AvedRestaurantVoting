@@ -56,6 +56,12 @@ public class RestaurantVoted extends AbstractBaseEntity {
         this.restaurant = restaurant;
     }
 
+    public RestaurantVoted(LocalDate date, Integer votes, Restaurant restaurant) {
+        this.date = date;
+        this.votes = votes;
+        this.restaurant = restaurant;
+    }
+
     @Override
     public Integer getId() {
         return id;

@@ -10,6 +10,7 @@ import restaurantVoting.repository.vote.VoteRepository;
 import restaurantVoting.util.ValidationUtil;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 @Service
@@ -25,8 +26,6 @@ public class VoteService {
     public Vote get(int id, Integer userId, Integer restaurantId) { return ValidationUtil.checkNotFoundWithId(repository.get(id, userId, restaurantId),id);
     }
 
-    public void delete(int id) {ValidationUtil.checkNotFoundWithId(repository.delete(id), id);}
-
     public List<Vote> getAll(){ return repository.getAll();}
 
     public void update(Vote vote, Integer userId, Integer restaurantId){
@@ -36,7 +35,10 @@ public class VoteService {
 
     public Vote create(Vote vote, Integer userId, Integer restaurantId){
         Assert.notNull(vote, "vote must not be null");
-        return repository.save(vote, userId, restaurantId);
+        LocalTime timeNow = LocalTime.now();
+        if (timeNow.isBefore(Vote.STOP_VOTING)) {
+            return repository.save(vote, userId, restaurantId);
+        } else return vote;
     }
 
     public List<Vote> getByUser(Integer userId){

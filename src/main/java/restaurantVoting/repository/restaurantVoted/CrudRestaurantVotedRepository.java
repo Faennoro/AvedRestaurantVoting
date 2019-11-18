@@ -38,4 +38,7 @@ public interface CrudRestaurantVotedRepository extends JpaRepository<RestaurantV
     @Query("SELECT r FROM RestaurantVoted r WHERE r.restaurant.id=:restaurantId")
     Optional<RestaurantVoted> getWithRestaurant(@Param("restaurantId") Integer restaurantId);
 
+    @Query("SELECT  r FROM RestaurantVoted  r WHERE r.restaurant.id=:restaurantId AND r.date=:date")
+    Optional<RestaurantVoted> getWithRestaurantDate(Integer restaurantId, LocalDate date);
+
 }

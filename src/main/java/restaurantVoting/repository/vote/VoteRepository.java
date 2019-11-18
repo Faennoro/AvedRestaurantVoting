@@ -25,5 +25,5 @@ public interface VoteRepository {
 
     List<Vote> getAll();
 
-    int delete(int id);
+    void delete(Vote vote);
 }

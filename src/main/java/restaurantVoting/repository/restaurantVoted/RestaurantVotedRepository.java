@@ -24,4 +24,10 @@ public interface RestaurantVotedRepository {
     Optional<RestaurantVoted> getBetweenDates(LocalDate minDate, LocalDate maxDate);
 
     Optional<RestaurantVoted> getWithRestaurant(Integer restaurantId);
+
+    Optional<RestaurantVoted> getWithRestaurantDate(Integer restaurantId, LocalDate date);
+
+    void newVote(Integer restaurantId, LocalDate date);
+
+    void decreaseVotes(Integer restaurantId, LocalDate date);
 }

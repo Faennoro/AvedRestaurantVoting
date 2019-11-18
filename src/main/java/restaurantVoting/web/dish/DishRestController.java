@@ -22,10 +22,10 @@ public class DishRestController extends AbstractDishController {
     }
 
     @Override
-    @DeleteMapping("/{restaurantId}/dishes/{id}")
+    @DeleteMapping("/{id}")
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable int id, @PathVariable int restaurantId) {
-        super.delete(id, restaurantId);
+    public void delete(@PathVariable int id) {
+        super.delete(id);
     }
 
     @Override

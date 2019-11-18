@@ -38,8 +38,6 @@ public interface CrudVoteRepository extends JpaRepository<Vote, Integer> {
     @Query("SELECT r FROM Restaurant r WHERE r.id=:Id ORDER BY r.name ASC")
     List<Dish> getAll();
 
-    @Transactional
-    @Modifying
-    @Query("DELETE FROM Vote v WHERE v.id=:id")
-    int delete(@Param("id") int id);
+    @Override
+    void delete(Vote entity);
 }

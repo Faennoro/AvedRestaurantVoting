@@ -59,4 +59,33 @@ public class RestaurantVotedRepositoryImpl implements RestaurantVotedRepository 
     public List<RestaurantVoted> getAll() {
         return crudRestaurantVotedRepository.findAll(SORT_NAME_ADDRESS);
     }
+
+    @Override
+    public Optional<RestaurantVoted> getWithRestaurantDate(Integer restaurantId, LocalDate date) {
+        return crudRestaurantVotedRepository.getWithRestaurantDate(restaurantId,date);
+    }
+
+    @Override
+    public void newVote(Integer restaurantId, LocalDate date) {
+        RestaurantVoted restaurantVoted = crudRestaurantVotedRepository.getWithRestaurantDate(restaurantId,date).orElse(null);
+        if (restaurantId!=null){
+            Integer newVotes = restaurantVoted.getVotes()+1;
+            restaurantVoted.setVotes(newVotes);
+        } else {
+            restaurantVoted = new RestaurantVoted(date,1,crudRestaurantRepository.getOne(restaurantId));
+        }
+        crudRestaurantVotedRepository.save(restaurantVoted);
+    }
+
+    @Override
+    public void decreaseVotes(Integer restaurantId, LocalDate date) {
+        RestaurantVoted restaurantVoted = crudRestaurantVotedRepository.getWithRestaurantDate(restaurantId,date).orElse(null);
+        if (restaurantVoted!=null && restaurantVoted.getVotes()>1){
+            Integer newVotes = restaurantVoted.getVotes()+1;
+            restaurantVoted.setVotes(newVotes);
+            crudRestaurantVotedRepository.save(restaurantVoted);
+        } else if (restaurantVoted !=null && restaurantVoted.getVotes()==1){
+            crudRestaurantVotedRepository.delete(restaurantVoted);
+        }
+    }
 }

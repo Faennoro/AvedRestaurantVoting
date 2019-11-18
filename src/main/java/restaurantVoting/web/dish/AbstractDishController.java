@@ -21,9 +21,9 @@ public abstract class AbstractDishController {
         return service.get(id, restaurantId);
     }
 
-    public void delete(int id, int restaurantId){
-        log.info("delete dish {} for restaurant {}", id, restaurantId);
-        service.delete(id, restaurantId);
+    public void delete(int id){
+        log.info("delete dish {}", id);
+        service.delete(id);
     }
 
     public List<Dish> getAll(int restaurantId){

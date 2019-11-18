@@ -46,4 +46,5 @@ public class RestaurantRestController extends AbstractRestaurantController {
     public void update(@RequestBody Restaurant restaurant, @PathVariable int id) {
         super.update(restaurant, id);
     }
+
 }
